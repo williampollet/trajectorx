@@ -1,7 +1,7 @@
 {
   "name": "trajectorx",
   "scripts": {
-    "postdeploy": "rails db:migrate"
+    "postdeploy": "cd client && yarn install && rails db:migrate"
   },
   "env": {
     "LANG": {
