@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import launchRocket from '../constants/planetsActionCreators';
 
 export default class RocketLauncher extends React.Component {
   /**
@@ -9,13 +8,16 @@ export default class RocketLauncher extends React.Component {
 
    constructor(props) {
      super(props);
+
+   }
+
+   handleClick(){
+     launchRocket()
    }
 
    render() {
      return (
-      <button onClick={() => {
-        dispatch(launchRocket())
-      }}>
+      <button onClick={ this.handleClick }>
         Launch the rocket!
       </button>
      )
