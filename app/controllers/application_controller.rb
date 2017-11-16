@@ -3,4 +3,8 @@ class ApplicationController < ActionController::Base
 
   def index
   end
+
+  def marci
+    0=="0"
+  end
 end
