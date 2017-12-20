@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { LAUNCH_ROCKET } from '../constants/planetsConstants';
+import { INCREMENT_TIMER } from '../constants/planetsConstants';
 
 const rocket_status = (state = '', action) => {
   switch (action.type) {
@@ -10,37 +11,15 @@ const rocket_status = (state = '', action) => {
   }
 };
 
-const speed = (state = '', action) => {
+const timer = (state = '', action) => {
   switch (action.type) {
-    case LAUNCH_ROCKET:
-      return 1;
+    case INCREMENT_TIMER:
+      return state+1
     default:
       return state;
   }
-};
+}
 
-const time = (state = '', action) => {
-  return state.time + 1
-};
-
-const x = (state = '', action) => {
-  switch (action.type) {
-    case TIME_INTERVAL_START:
-      return ;
-    default:
-      return state;
-  }
-};
-
-const y = (state = '', action) => {
-  switch (action.type) {
-    case TIME_INTERVAL_START:
-      return ;
-    default:
-      return state;
-  }
-};
-
-const planetsReducer = combineReducers({ rocket_status });
+const planetsReducer = combineReducers({ rocket_status, timer });
 
 export default planetsReducer;
