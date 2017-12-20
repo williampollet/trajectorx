@@ -8,11 +8,14 @@ export default class RocketLauncher extends React.Component {
 
    constructor(props) {
      super(props);
-
    }
 
-   handleClick(){
-     launchRocket()
+   handleClick = () => {
+     this.props.launchRocket()
+
+     setInterval(() => {
+
+     }, 1000)
    }
 
    render() {

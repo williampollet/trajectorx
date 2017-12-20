@@ -14,13 +14,28 @@ export default class Rocket extends React.Component {
 
     // How to set initial state in ES6 class syntax
     // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
-    this.state = { rocket_status: this.props.rocket_status };
+    this.state = {
+      initial_inclination: this.props.initial_inclination,
+      speed: this.props.speed,
+      x: this.props.x,
+      y: this.props.y,
+    };
+  }
+
+  update_position = () => {
+    this.setState({
+      x: this.state.x + speed * this.props.time_interval,
+      y: this.state.y + speed * this.props.time_interval
+    })
+
+    console.log(this.state.x)
+    console.log(this.state.y)
   }
 
   render() {
     return (
       <div>
-        Hello, Will, the status of the rocket is {this.state.rocket_status}
+        Hello, Will, the status of the rocket is {this.props.rocket_status}
       </div>
     );
   }
