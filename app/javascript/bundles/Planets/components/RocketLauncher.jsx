@@ -14,7 +14,6 @@ export default class RocketLauncher extends React.Component {
      this.props.launchRocket()
      setInterval(
        () => {
-         console.log(this.props)
          this.props.tick()
        },
      1000)

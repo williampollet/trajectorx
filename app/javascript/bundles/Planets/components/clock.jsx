@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default class Rocket extends React.Component {
+export default class Clock extends React.Component {
   static propTypes = {
-    rocket_status: PropTypes.string.isRequired, // this is passed from the Rails view
+    timer: PropTypes.number.isRequired,
   };
 
   constructor(props) {
@@ -13,7 +13,7 @@ export default class Rocket extends React.Component {
   render() {
     return (
       <div>
-        The status of the rocket is {this.props.rocket_status}
+        Time is now: {this.props.timer}
       </div>
     );
   }
