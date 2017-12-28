@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import RocketLauncherContainer from '../containers/RocketLauncherContainer'
+import RocketContainer from '../containers/RocketContainer'
+import Clock from '../containers/ClockContainer'
 
 export default class Earth extends React.Component {
-  static propTypes = {
-    name: PropTypes.string.isRequired, // this is passed from the Rails view
-  };
-
-  /**
-   * @param props - Comes from your rails view.
-   */
 
    constructor(props) {
      super(props);
+   }
 
-     // How to set initial state in ES6 class syntax
-     // https://facebook.github.io/react/docs/reusable-components.html#es6-classes
-     this.state = { name: this.props.name };
+   render() {
+     return (
+       <div>
+         <Clock />
+         <RocketContainer />
+         <RocketLauncherContainer />
+       </div>
+     )
    }
 }
