@@ -8,7 +8,7 @@ class PlanetsController < ApplicationController
       positionX: 0,
       positionY: 10,
       launchAngle: 60,
-      launchVelocity: 1000,
+      launchVelocity: 100,
     }
   end
 end
