@@ -16,7 +16,7 @@ export default class RocketLauncher extends React.Component {
        () => {
          this.props.tick()
        },
-     1)
+     10)
    }
 
   render() {
@@ -30,7 +30,7 @@ export default class RocketLauncher extends React.Component {
     return (
       <div style = { rocketLauncherStyle } >
         <button onClick={ this.handleClick }>
-        Launch the rocket!
+          Launch the rocket!
         </button>
       </div>
     )

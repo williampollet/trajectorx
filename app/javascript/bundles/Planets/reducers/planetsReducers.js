@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { LAUNCH_ROCKET } from '../constants/planetsConstants';
 import { INCREMENT_TIMER } from '../constants/planetsConstants';
+import { LOAD } from '../constants/planetsConstants'
 import { reducer as formReducer } from 'redux-form'
 
 const rocketStatus = (state = '', action) => {
@@ -47,6 +48,19 @@ const launchAngle = (state = '', action) => {
   return state;
 }
 
+const loadData = (state = {}, action) => {
+  switch (action.type) {
+    case LOAD:
+      console.log(state)
+      console.log(action)
+      return {
+        launchAngle: action.launchAngle,
+        launchVelocity: action.launchVelocity,
+      }
+    default:
+      return state;
+  }
+}
 
 const planetsReducer = combineReducers({
   rocketStatus,
@@ -55,6 +69,7 @@ const planetsReducer = combineReducers({
   positionY,
   launchAngle,
   launchVelocity,
+  loadData,
   form: formReducer,
 });
 
