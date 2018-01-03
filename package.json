@@ -6,6 +6,7 @@
     "babel-preset-react": "^6.24.1",
     "coffeescript": "1.12.7",
     "eslint": "^4.13.1",
+    "mathjs": "^3.18.0",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

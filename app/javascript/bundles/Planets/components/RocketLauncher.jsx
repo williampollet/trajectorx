@@ -16,14 +16,23 @@ export default class RocketLauncher extends React.Component {
        () => {
          this.props.tick()
        },
-     1000)
+     1)
    }
 
-   render() {
-     return (
-      <button onClick={ this.handleClick }>
+  render() {
+    const rocketLauncherStyle = {
+      bottom: '0',
+      position: 'fixed',
+      width: '100%',
+      backgroundColor: 'green',
+    }
+
+    return (
+      <div style = { rocketLauncherStyle } >
+        <button onClick={ this.handleClick }>
         Launch the rocket!
-      </button>
-     )
-   }
+        </button>
+      </div>
+    )
+  }
 }

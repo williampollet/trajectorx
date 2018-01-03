@@ -5,7 +5,12 @@ import Rocket from '../components/Rocket';
 import * as actions from '../actions/planetsActionCreators';
 
 // Which part of the Redux global state does our component want to receive as props?
-const mapStateToProps = (state) => ({ rocket_status: state.rocket_status });
+const mapStateToProps = (state) => ({
+    rocketStatus: state.rocketStatus,
+    launchVelocity: state.launchVelocity,
+    launchAngle: state.launchAngle,
+    timer: state.timer,
+  });
 
 // Don't forget to actually use connect!
 // Note that we don't export HelloWorld, but the redux "connected" version of it.

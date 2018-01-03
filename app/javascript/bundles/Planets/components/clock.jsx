@@ -10,10 +10,14 @@ export default class Clock extends React.Component {
     super(props);
   }
 
+  currentTime = () => {
+    return this.props.timer / 1000
+  }
+
   render() {
     return (
       <div>
-        Time is now: {this.props.timer}
+        Time is now: { this.currentTime() }
       </div>
     );
   }
