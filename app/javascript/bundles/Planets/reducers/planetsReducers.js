@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 import { LAUNCH_ROCKET } from '../constants/planetsConstants';
 import { INCREMENT_TIMER } from '../constants/planetsConstants';
+import { reducer as formReducer } from 'redux-form'
 
 const rocket_status = (state = '', action) => {
   switch (action.type) {
@@ -20,6 +21,10 @@ const timer = (state = '', action) => {
   }
 }
 
-const planetsReducer = combineReducers({ rocket_status, timer });
+const planetsReducer = combineReducers({
+   rocket_status,
+   timer,
+   form: formReducer
+ });
 
 export default planetsReducer;
