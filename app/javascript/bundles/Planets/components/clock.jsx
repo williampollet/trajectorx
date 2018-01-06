@@ -11,7 +11,7 @@ export default class Clock extends React.Component {
   }
 
   currentTime = () => {
-    return this.props.timer / 1000
+    return this.props.timer / 100
   }
 
   render() {
