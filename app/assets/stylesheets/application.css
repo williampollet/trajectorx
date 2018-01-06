@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+  background-image: url('http://www.open2d.com/data/uploads/2015/02/4.jpg')
+}
