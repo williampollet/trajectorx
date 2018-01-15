@@ -3,16 +3,21 @@ import React from 'react';
 import { Field } from 'redux-form'
 
 export default class LaunchParametersForm extends React.Component {
-
   constructor(props) {
     super(props);
   }
 
-  render(){
-    const { handleSubmit } = this.props
+  submitter = (values) => {
+    this.props.loadData({
+      launchAngle: values.launchAngle,
+      launchVelocity: values.launchVelocity,
+    })
+  }
 
+  render(){
+    console.log(this.props)
     return (
-      <form onSubmit = {handleSubmit} >
+      <form onSubmit = {this.props.handleSubmit(this.submitter)} >
         <div>
           <label htmlFor='launchAngle'>Initial Angle</label>
           <Field
@@ -31,7 +36,7 @@ export default class LaunchParametersForm extends React.Component {
             type='number'
           />
         </div>
-        <button type = 'handleSubmit'> update parameters </button>
+        <button > update parameters </button>
       </form>
     )
   }

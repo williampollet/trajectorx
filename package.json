@@ -13,7 +13,8 @@
     "react-on-rails": "^10.0.2",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
-    "redux-form": "^7.2.0"
+    "redux-form": "^7.2.0",
+    "redux-logger": "^3.0.6"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.9.5"

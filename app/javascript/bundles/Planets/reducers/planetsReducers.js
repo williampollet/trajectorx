@@ -41,22 +41,20 @@ const positionY = (state = '', action) => {
 }
 
 const launchVelocity = (state = '', action) => {
-  return state;
+  switch (action.type) {
+    case LOAD:
+      console.log('blubul')
+      return action.launchVelocity
+    default:
+      return state;
+  }
 }
 
 const launchAngle = (state = '', action) => {
-  return state;
-}
-
-const loadData = (state = {}, action) => {
   switch (action.type) {
     case LOAD:
-      console.log(state)
-      console.log(action)
-      return {
-        launchAngle: action.launchAngle,
-        launchVelocity: action.launchVelocity,
-      }
+      console.log("coucou")
+      return action.launchAngle
     default:
       return state;
   }
@@ -69,7 +67,6 @@ const planetsReducer = combineReducers({
   positionY,
   launchAngle,
   launchVelocity,
-  loadData,
   form: formReducer,
 });
 

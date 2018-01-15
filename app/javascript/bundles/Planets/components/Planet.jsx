@@ -10,19 +10,12 @@ export default class Earth extends React.Component {
      super(props);
    }
 
-   submit = (data) => {
-     this.props.loadData({
-       launchAngle: data.launchAngle,
-       launchVelocity: data.launchVelocity,
-     })
-   }
-
    render() {
      return (
        <div>
          <Clock />
          <RocketContainer />
-         <LaunchParametersFormContainer onSubmit={this.submit} />
+         <LaunchParametersFormContainer />
          <RocketLauncherContainer />
        </div>
      )
