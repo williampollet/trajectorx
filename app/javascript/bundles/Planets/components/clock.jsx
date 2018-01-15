@@ -15,9 +15,12 @@ export default class Clock extends React.Component {
   }
 
   render() {
+    const clockStyle = {
+      color: 'white',
+    }
     return (
-      <div>
-        Time is now: { this.currentTime() }
+      <div style = { clockStyle } >
+        Current time: { this.currentTime() }
       </div>
     );
   }
